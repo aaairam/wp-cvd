@@ -87,7 +87,7 @@
                     <div class="card__text">
                     <h2><?php the_title() ?></h2>
                     <p><?php the_content() ?></p>
-                    <a href=""><?php echo get_the_excerpt() ?></a>
+                    <a href="<?php the_permalink() ?>"><?php echo get_the_excerpt() ?></a>
                     </div>
                 </div>             
                 <?php

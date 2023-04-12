@@ -751,7 +751,7 @@ transition: 300ms;
   font-weight: 700;
 }
 .updates .rp__item__text p{
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 /*-------------------tags--------------------*/
 .updates .updates__tags{
@@ -837,7 +837,7 @@ transition: 300ms;
   padding: 5rem 0;
   padding-top: 8rem;
 }
-.services2 .graphic{
+.services2 .web{
   display: flex;
   justify-content: space-between;
   margin: 0 5rem;
@@ -849,6 +849,17 @@ transition: 300ms;
   line-height: 5rem;
   margin-bottom: 5rem;
 }
+
+.services2 .service__text {
+  order: 2;
+  width: 50rem;
+  
+}
+
+.services2 img {
+  order: 1;
+}
+
 .services2 .service__text p{
   text-align: justify;
   max-width: 50rem;   
@@ -881,7 +892,7 @@ transition: 300ms;
   padding: 5rem 0;
   padding-top: 8rem;
 }
-.services3 .social{
+.services3 .web{
   display: flex;
   justify-content: space-between;
   margin: 0 5rem;
@@ -921,17 +932,17 @@ transition: 300ms;
       font-size: 4rem;
       text-align: center;
    }
-   .services2 .graphic{
+   .services2 .web{
       flex-direction: column;
    }
-   .services2 .graphic h1{
+   .services2 .web h1{
       font-size: 4rem;
       text-align: center;
    }
-   .services3 .social{
+   .services3 .web{
       flex-direction: column-reverse;
    }
-   .services3 .social h1{
+   .services3 .web h1{
       font-size: 4rem;
       text-align: center;
    }

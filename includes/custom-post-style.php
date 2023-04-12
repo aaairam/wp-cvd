@@ -100,3 +100,55 @@ function author_custom_post(){
 }
 
 add_action('init', 'author_custom_post');
+
+function category_custom_post(){
+    $categoryPost_label =array(
+        'name'   =>             __('Categories Post', 'textdomain'),
+        'singular_name'   =>    __('Categories Post', 'textdomain'),
+        'add_new'   =>          __('Add Categories Post', 'textdomain'),
+        'add_new_item'   =>     __('Add New Categories', 'textdomain'),
+        'edit_item'   =>        __('Edit Categories Post', 'textdomain'),
+        'all_items'   =>        __('Categories Post', 'textdomain'),
+    );
+
+    $categoryPost_args = array(
+        'labels'   => $categoryPost_label,
+        'public'   => true,
+        'capability_type' => 'post',
+        'show_ui'   => true,
+         'taxonomies' => array ('post_tag' , 'category'),
+         'supports' => array  ('title', 'editor' ,'thumbnail' , 'excerpt'),
+    );
+
+    register_post_type('categoryPost' , $categoryPost_args);
+   
+}
+
+add_action('init', 'category_custom_post');
+
+function recent_custom_post(){
+    $recentPost_label =array(
+        'name'   =>             __('Recent Post', 'textdomain'),
+        'singular_name'   =>    __('Recent Post', 'textdomain'),
+        'add_new'   =>          __('Add Recent Post', 'textdomain'),
+        'add_new_item'   =>     __('Add New Recent', 'textdomain'),
+        'edit_item'   =>        __('Edit Recent Post', 'textdomain'),
+        'all_items'   =>        __('Recent Post', 'textdomain'),
+    );
+
+    $recentPost_args = array(
+        'labels'   => $recentPost_label,
+        'public'   => true,
+        'capability_type' => 'post',
+        'show_ui'   => true,
+         'taxonomies' => array ('post_tag' , 'category'),
+         'supports' => array  ('title', 'editor' ,'thumbnail' , 'excerpt'),
+    );
+
+    register_post_type('recentPost' , $recentPost_args);
+   
+}
+
+add_action('init', 'recent_custom_post');
+
+
